@@ -47,5 +47,8 @@ function makeSound(key){
 }
 function buttonanimation(currentkey){
     var activebutton =document.querySelectorAll("."+ currentkey);
-    
+    activebutton.classlist.add("pressed");
+    setTimeout(function () {
+        activebutton.classlist.remove("pressed");
+    },100);
 }
