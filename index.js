@@ -4,7 +4,7 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function(){;
 
 var buttoninnerhtml=this.innerHTML;
 makeSound (buttoninnerhtml);
-
+buttonanimation(buttoninnerhtml);
 });
 }
 document.addEventListener("keypress",function(event){
@@ -41,6 +41,11 @@ function makeSound(key){
         var kick=new Audio("sounds/kick-bass.mp3");
         kick.play();
         break;
+    default:console.log(buttoninnerhtml);
 
     }
+}
+function buttonanimation(currentkey){
+    var activebutton =document.querySelectorAll("."+ currentkey);
+    
 }
